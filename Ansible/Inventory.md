@@ -4,11 +4,11 @@
 
 ````
 [windows]
-192.168.10.10 (*ip du serveur*)
+192.168.10.10 (ip du serveur)
 
 [windows:vars]
-ansible_user= *user@localdomaincom*
-ansible_password= *Password*
+ansible_user=user@localdomain.com
+ansible_password=Password
 ansible_connection=winrm
 ansible_port=5985
 ansible_winrm_scheme=http
@@ -32,8 +32,7 @@ all:
 ````
 all:
   hosts:
-    *Nom de la machine Linux*
-    vm-web-staging-01:
+    NomDeLaMachine:
       ansible_host: *XXX.XXX.XXX.XXX*
       ansible_user: *Utilisateur*
 
