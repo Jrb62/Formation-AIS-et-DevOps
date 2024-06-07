@@ -33,7 +33,7 @@ all:
 all:
   hosts:
     NomDeLaMachine:
-      ansible_host: *XXX.XXX.XXX.XXX*
-      ansible_user: *Utilisateur*
+      ansible_host: XXX.XXX.XXX.XXX
+      ansible_user: Utilisateur
 
 ````      
