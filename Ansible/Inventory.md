@@ -4,11 +4,11 @@
 
 ````
 [windows]
-192.168.10.10
+192.168.10.10 (*ip du serveur*)
 
 [windows:vars]
-ansible_user=ansible@ais.fr
-ansible_password=Toto1234.
+ansible_user= *user@localdomaincom*
+ansible_password= *Password*
 ansible_connection=winrm
 ansible_port=5985
 ansible_winrm_scheme=http
