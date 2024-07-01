@@ -42,8 +42,8 @@ Inconvénients : Peut nécessiter une gestion plus complexe que la topologie en 
 
 ## Point-to-Point Topology
 
-```
-`Description : Une connexion directe entre deux sites.
+````
+Description : Une connexion directe entre deux sites.
 
 Avantages : Simplicité et fiabilité, faible latence.
 
