@@ -43,7 +43,7 @@
 
 • ATM (Asynchronous Transfer Mode) : Utilisé pour le transport de voix, vidéo et données, remplacé par des technologies plus modernes.
 
-## *Interconnexion de Secours (Mono/Multifournisseur d’Accès à Internet)*
+## *Interconnexion de Secours*
 
 • Mono FAI : Utilisation d'un seul fournisseur d'accès à Internet. Moins coûteux mais vulnérable aux pannes du fournisseur.
 
@@ -58,7 +58,7 @@
 • Cas d'utilisation : Adaptation dynamique aux conditions du réseau, priorisation des applications critiques, intégration facile avec les services cloud.
 
 
-## *Protocoles de Routage (Rôles : Redondance, Équilibrage de Charge, Multiplicité des Chemins)*
+## *Protocoles de Routage*
 
 
 • Redondance : Assure la continuité du service en cas de défaillance d'un lien.
@@ -68,7 +68,7 @@
 • Multiplicité des Chemins : Utilisation de plusieurs routes pour acheminer les données, assurant flexibilité et résilience.
 
 
-## *Protocoles de Routage (Détection de Panne et Basculement : État de Liens, Mécanismes de Timers, Basculement Automatique)*
+## *Protocoles de Routage*
 
 
 • Détection de Panne : Protocoles comme BFD (Bidirectional Forwarding Detection) surveillent l'état des liens pour détecter les pannes rapidement.
@@ -78,7 +78,7 @@
 • Basculement Automatique : Les routes sont mises à jour automatiquement pour utiliser des chemins alternatifs en cas de panne.
 
 
-## *Protocoles de Routage (Quels sont les Protocoles de Routage Utilisés dans les WAN)*
+## *Protocoles de Routage*
 
 
 • RIP (Routing Information Protocol) : Protocole de routage basé sur la distance, simple mais limité en termes d'échelle.
