@@ -27,3 +27,15 @@ R31# network 192.168.36.0 0.0.0.255 area 0
 R31# router bgp 300
 R31# redistribute ospf 1 match internal external
 ````
+
+### Show BGP & OSPF
+
+##### R31
+
+![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/BGP%2031.png)
+![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/OSPF%2031.png)
+
+##### R32
+
+![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/bgp%2032.png)
+![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/OSPF%2032.png)
