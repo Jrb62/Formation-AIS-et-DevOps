@@ -14,7 +14,7 @@
 
 ![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/image.png)
 
-###### Quels débits avez-vous relevé ?
+##### Quels débits avez-vous relevé ?
 
 ![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/transfert%201.png)
 
@@ -22,11 +22,11 @@
 
 *On vois une différence de débit car il envoie en priorité les paquets a l'interface du routeur qui est priorisé*
 
-###### En mode "simulation", à partir du poste H1, retrouver le code DSCP correspondant au paquet arrivant dans le routeur par le port Fa1/0 et sortant par le port Fa0/1
+##### En mode "simulation", à partir du poste H1, retrouver le code DSCP correspondant au paquet arrivant dans le routeur par le port Fa1/0 et sortant par le port Fa0/1
 
 ![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/trasnfert%203.png)
 
-###### Idem pour les paquets arrivant par le port Fa0/0 depuis le poste G1 et sortant par le port Fa0/1
+##### Idem pour les paquets arrivant par le port Fa0/0 depuis le poste G1 et sortant par le port Fa0/1
 
 ![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/trasnfert%204.png)
 
