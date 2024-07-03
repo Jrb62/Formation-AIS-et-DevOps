@@ -36,3 +36,19 @@ systemctl status docker
 ````
 systemctl enable docker 
 ````
+
+
+### QUELQUES COMMANDE UTILE POUR DOCKER
+
+Permet de voir les containers fonctionnel, la date de creation, l’age du container, son noms, et son ID
+````
+docker ps -a
+````
+### Permet d’arréter (stop) et supprimer (rm) un container en ajoutant son id.
+````
+docker stop /rm *container id* 
+````
+### Lance le docker*compose.yml pour executer les containers.
+````
+docker compose up -d
+````
