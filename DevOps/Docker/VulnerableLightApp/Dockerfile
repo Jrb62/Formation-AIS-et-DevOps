@@ -13,11 +13,8 @@ RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod
 RUN apt update && \
     apt install -y dotnet-sdk-8.0 dotnet-runtime-8.0
 
-EXPOSE 3000
-EXPOSE 4000
-
 WORKDIR /app
 RUN git clone https://github.com/Jrb62/VulnerableLightApp.git
 WORKDIR /app/VulnerableLightApp
 
-CMD ["dotnet", "run"]
+CMD ["dotnet", "run", "--url=https://0.0.0.0:3000"]
