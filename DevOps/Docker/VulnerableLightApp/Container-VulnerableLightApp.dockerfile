@@ -14,5 +14,5 @@ RUN apt update && \
    sudo apt install -y dotnet-runtime-8.0
 
 COPY VulnerableLightApp-main /app/vulnerablelightapp
-WORKDIR /app/vulneerablelightapp
+WORKDIR /app/vulnerablelightapp
 CMD ["dotnet", "run"]
