@@ -1,0 +1,59 @@
+---
+- name: Secure Windows Server 2022 with Active Directory
+  hosts: windows
+  gather_facts: no
+  tasks:
+
+     - name: Ensure WinRM is configured
+       win_service:
+          name: WinRM
+          start_mode: auto
+          state: started
+
+     - name: Set password policy
+       win_shell: |
+         Import-Module ActiveDirectory
+         Set-ADDefaultDomainPasswordPolicy -Identity "AIS.FR" -MinPasswordLength 12
+       register: set_password_policy
+
+     - name: Disable guest account
+       win_user:
+         name: guest
+         state: absent
+
+     - name: Disable NTLMv1
+       win_shell: |
+         Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -Name LmCompatibilityLevel -Value 5
+       register: disable_ntlmv1
+
+     - name: Enable Kerberos preauthentication for all user accounts
+       win_shell: |
+         Import-Module ActiveDirectory
+         Get-ADUser -Filter * -Properties KerberosEncryptionType | Set-ADUser -KerberosEncryptionType AES128,AES256
+       register: kerberos_pre_auth
+
+     - name: Ensure all administrator accounts have Kerberos preauthentication enabled
+       win_shell: |
+         Import-Module ActiveDirectory
+         Get-ADUser -Filter {memberof -recursiveMatch "CN=Administrateurs,CN=Builtin,DC=AIS,DC=FR"} -Properties   KerberosEncryptionType | Set-ADUser -KerberosEncryptionType AES128,AES256
+       register: admin_kerberos_pre_auth
+
+     - name: Detect users with indirect admin rights
+       win_shell: |
+         Import-Module ActiveDirectory
+         Get-ADUser -Filter {memberof -recursiveMatch "CN=Administrateurs,CN=Builtin,DC=AIS,DC=FR"} -Properties MemberOf | Select-Object -Property SamAccountName, MemberOf
+       register: indirect_admin_users
+
+     - name: Basic security measures - Disable default administrator account
+       win_user:
+         name: Administrator
+         state: absent
+
+     - name: Basic security measures - Enable firewall
+       win_feature:
+         name: Windows-Defender
+         state: present
+
+     - name: Basic security measures - Enable Windows Defender
+       win_shell: |
+         Set-MpPreference -DisableRealtimeMonitoring $false
