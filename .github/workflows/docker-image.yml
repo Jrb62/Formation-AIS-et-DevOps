@@ -1,18 +1,42 @@
-name: Docker Image CI
+name: Dockerfile Test Workflow
 
+# Déclencheur : exécute ce workflow lors de pushes et pull requests sur la branche principale
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-
-  build:
-
+  docker-build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      # Étape 1 : Vérification du code source
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Étape 2 : Construire l'image Docker à partir du Dockerfile situé dans le répertoire spécifique
+      - name: Build Docker image
+        run: |
+          docker build -t my-app:latest -f DevOps/Docker/VulnerableLightApp/Dockerfile .
+
+      # Étape 3 : Tester l'image Docker (exemple de test)
+      - name: Run Docker container tests
+        run: |
+          # Lancer le conteneur en arrière-plan
+          docker run -d --name test-container my-app:latest
+          
+          # Vérifier que le conteneur est en marche
+          docker ps | grep test-container
+
+          # Exécuter des tests spécifiques (à adapter selon votre application)
+          docker exec test-container <votre-commande-de-test>
+
+      # Étape 4 : Nettoyage (arrêter et supprimer le conteneur)
+      - name: Cleanup
+        run: |
+          docker stop test-container
+          docker rm test-container
