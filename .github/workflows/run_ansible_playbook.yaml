@@ -2,8 +2,8 @@ name: Run Ansible Playbook
 
 on:
   push:
-    branches:
-      - main  
+    paths:
+      - 'DevOps/Ansible/PlaybookLinux.yaml'
 
 jobs:
   run-playbook:

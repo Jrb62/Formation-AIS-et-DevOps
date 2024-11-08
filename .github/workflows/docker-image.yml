@@ -2,11 +2,8 @@ name: Dockerfile Test Workflow
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    paths:
+      - 'DevOps/Docker/VulnerableLightApp/Dockerfile'
 
 jobs:
   docker-build-and-test:
