@@ -20,4 +20,4 @@ jobs:
 
       - name: Run Ansible Playbook
         run: |
-          ansible-playbook DevOps/Ansible/PlaybookLinux.yaml -i DevOps/Ansible/inventory  # Spécifiez l'inventaire si nécessaire
+          ansible-playbook DevOps/Ansible/PlaybookLinux.yaml -i DevOps/Ansible/inventory
