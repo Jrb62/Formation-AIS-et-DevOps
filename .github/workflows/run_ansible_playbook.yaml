@@ -1,0 +1,23 @@
+name: Run Ansible Playbook
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  run-playbook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Run Ansible Playbook
+        run: |
+          ansible-playbook DevOps/Ansible/PlaybookLinux.yaml -i DevOps/Ansible/inventory  # Spécifiez l'inventaire si nécessaire
