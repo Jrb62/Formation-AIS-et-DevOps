@@ -23,7 +23,7 @@ jobs:
         run: |
           docker build -t my-app:latest -f DevOps/Docker/VulnerableLightApp/Dockerfile .
 
-       # Étape 3 : Tester l'image Docker (exemple de test basique)
+      # Étape 3 : Tester l'image Docker (exemple de test basique)
       - name: Run Docker container tests
         run: |
         
