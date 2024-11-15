@@ -45,7 +45,7 @@ Déplaçons nous maintenant dans ce dossier
 
 ``  cd /home/utilisateur/wazuh-docker ``
 
-Il faudra édite le fichier docker-compose.yml et modifier la variable *INDEX_PASSWORD* qui correspond au mot de passe du compote admin par défaut.
+Il faudra édite le fichier docker-compose.yml et modifier la variable *INDEX_PASSWORD* qui correspond au mot de passe du compte admin par défaut.
 
 ``  nano docker-compose.yml ``
 
