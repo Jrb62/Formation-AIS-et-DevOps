@@ -25,7 +25,7 @@
 
 ![alt tab](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/Wazuh4.png)
 
-##### Dans la création de l'agent il faut bien choisir le groupe que nous venons de créer précédemment.
+##### Dans la création de l'agent il faut bien choisir le groupe que nous venons de créer précédemment et bien renseigner l'adresse du serveur Wazuh.
 
 ##### Une fois l'agent créé, il faudra copier le lien créé par Wazuh pour le télécharger sur la machine Suricata.
 
