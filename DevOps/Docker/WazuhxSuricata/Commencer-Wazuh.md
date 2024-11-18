@@ -36,3 +36,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 ````
+
+##### En revenant sur l'interface Wazuh nous verrons notre agent active.
+
+![alt tab](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/Wazuh6.png)
