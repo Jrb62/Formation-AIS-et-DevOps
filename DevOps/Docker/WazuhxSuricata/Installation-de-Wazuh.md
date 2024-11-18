@@ -65,5 +65,5 @@ Vérifions les logs pour voir si tout démarre bien
 
 `` docker compose logs -f `` 
 
-
+[Installer Suricata]()
 [Commencer à utiliser Wazuh](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/aa25c361f5e57ae7ec536041b75e1c0c1901bffe/DevOps/Docker/WazuhxSuricata/Commencer-Wazuh)
