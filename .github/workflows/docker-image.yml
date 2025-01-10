@@ -6,10 +6,7 @@ on:
       environment:
         description: 'VulnerableLightApp'
         required: true
-        default: 'VLA'
-        push:
-        paths:
-          - 'DevOps/Docker/VulnerableLightApp/Dockerfile'
+        default: 'productionVLA'
 
 jobs:
   docker-build-and-test:

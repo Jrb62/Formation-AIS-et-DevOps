@@ -7,9 +7,6 @@ on:
         description: 'Ansible'
         required: true
         default: 'Playbook'
-        push:
-        paths:
-          - 'DevOps/Ansible/PlaybookLinux.yaml'
 
 jobs:
   run-playbook:
