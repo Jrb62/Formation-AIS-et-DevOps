@@ -23,5 +23,5 @@ jobs:
 
       - name: Run Ansible Playbook
         run: |
-          ansible-playbook DevOps/Ansible/PlaybookLinux.yaml -i localhost
-          ansible-playbook DevOps/Ansible/PlaybookWindows.yaml -i localhost
+          ansible-playbook DevOps/Ansible/PlaybookLinux.yaml -i /DevOps/Ansible/inventory.yaml
+          ansible-playbook DevOps/Ansible/PlaybookWindows.yaml -i /DevOps/Ansible/inventory.yaml
