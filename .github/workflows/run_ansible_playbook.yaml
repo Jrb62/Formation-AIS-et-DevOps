@@ -19,6 +19,8 @@ jobs:
       - name: Install Ansible
         run: |
           sudo apt-get update
+          sudo apt-get install python3-pip -y
+          sudo apt-get install passlib
           sudo apt-get install -y ansible
 
       - name: Run Ansible Playbook
