@@ -1,9 +1,15 @@
 name: Run Ansible Playbook
 
 on:
-  push:
-    paths:
-      - 'DevOps/Ansible/PlaybookLinux.yaml'
+  workflow_dispatch:  # Cela permet de déclencher manuellement le workflow
+  inputs:
+    environment:
+      description: 'Ansible'
+      required: true
+      default: 'Playbook'
+      push:
+      paths:
+          - 'DevOps/Ansible/PlaybookLinux.yaml'
 
 jobs:
   run-playbook:
