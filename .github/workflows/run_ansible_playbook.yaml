@@ -1,7 +1,7 @@
 name: Run Ansible Playbook
 
 on:
-  workflow_dispatch:  # Cela permet de déclencher manuellement le workflow
+  workflow_dispatch:  # Permet de déclencher manuellement le workflow
     inputs:
       environment:
         description: 'Ansible'
@@ -16,12 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Ansible
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install python3-pip -y
-          sudo apt-get install passlib
-          sudo apt-get install -y ansible
+          sudo apt-get install -y python3 python3-pip
+          pip3 install ansible passlib
 
       - name: Run Ansible Playbook
         run: |
