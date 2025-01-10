@@ -4,9 +4,9 @@ on:
   workflow_dispatch:  # Cela permet de déclencher manuellement le workflow
     inputs:
       environment:
-        description: 'Vaultwarden'
+        description: 'VulnerableLightApp'
         required: true
-        default: 'production'
+        default: 'VLA'
         push:
         paths:
           - 'DevOps/Docker/VulnerableLightApp/Dockerfile'
