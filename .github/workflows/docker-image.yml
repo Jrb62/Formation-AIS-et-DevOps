@@ -1,9 +1,15 @@
 name: Dockerfile Test Workflow
 
 on:
-  push:
-    paths:
-      - 'DevOps/Docker/VulnerableLightApp/Dockerfile'
+  workflow_dispatch:  # Cela permet de déclencher manuellement le workflow
+    inputs:
+      environment:
+        description: 'Vaultwarden'
+        required: true
+        default: 'production'
+        push:
+        paths:
+          - 'DevOps/Docker/VulnerableLightApp/Dockerfile'
 
 jobs:
   docker-build-and-test:
