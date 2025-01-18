@@ -6,11 +6,11 @@ Réaliser un audit de sécurité sur le dépôt GitHub du Backend de l'applicati
 
 ### Analyse des données sensibles
 
-Utilisation de **CodeQL** et **Dependabot**, deux outils intégré dans github. Il faudra les activés dans dans l'onglet **Security**
+Utilisation de **CodeQL** et **Dependabot**, deux outils intégré dans github. Il faudra les activés dans l'onglet **Security**
 
 ![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/SecurityGitHub1.png)
 
-### Ajout d'un fichier **.yml** pour exucuter une analyse avec le CI-CD.
+### Ajout d'un fichier **.yml** pour exécuter une analyse avec le CI-CD.
 
 ![alt tag](https://github.com/Jrb62/Formation-AIS-et-DevOps/blob/main/screenshot/securityGithub2.png)
 
